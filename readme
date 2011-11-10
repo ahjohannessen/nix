@@ -1,8 +1,8 @@
-Fabric script that turns your Ubuntu box into Teamcity build agent with Mono & Rake support.
+Fabric script that turns your Ubuntu box into a Teamcity build agent with Mono & Rake support.
 
 Prerequistis
 
- - Fabric
+ - fabric ( http://docs.fabfile.org )
  - sudo rights
  - ssh access
 
