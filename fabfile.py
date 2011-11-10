@@ -104,6 +104,7 @@ def install_buildagent():
 
             append_agent_property('env.PATH', env.mono_location + ':%env.PATH%', 'buildAgent.properties')
 
+    sudo('mkdir -p %s' % env.agent_location, pty=True)
     sudo('cp -R %s/* %s' % (agent_dir, env.agent_location), pty=True)
     
     install_buildagent_upstarts()
