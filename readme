@@ -1,4 +1,4 @@
-Fabric script that turns your ubuntu box into a Mono build machine with rake support.
+Fabric script that turns your Ubuntu box into Teamcity build agent with Mono & Rake support.
 
 Prerequistis
 
@@ -9,8 +9,7 @@ Prerequistis
 The script 
 
  - installs mono
- - installs team city build agent
+ - installs build agent
  - installs ruby/rake/albacore
 
- - configures agent
- - makes agent start as a daemon
+ - configures agent and makes it run as a daemon
