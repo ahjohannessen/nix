@@ -11,7 +11,7 @@ env.mono_location = '/opt/%s' % env.mono_branch
 
 env.agent_zip = 'buildAgent.zip'
 env.agent_link = 'http://teamcity.codebetter.com/update/%s' % env.agent_zip
-env.agent_server_url = 'http://tc'
+env.agent_server_url = 'http://localhost'
 env.agent_location = '/opt/buildagent'
 
 def install():
@@ -98,7 +98,7 @@ def install_buildagent():
         run('chmod +x bin/agent.sh', pty=True)
 
         with cd('conf'):
-            run('cp buildAgent.dist.properties buildAgent.properties', pty=True)
+            run('mv buildAgent.dist.properties buildAgent.properties', pty=True)
             if env.agent_server_url:
                 replace_agent_property('serverUrl', env.agent_server_url, 'buildAgent.properties')
 
@@ -126,4 +126,4 @@ def append_agent_property(name, value, propfile):
     append(propfile, '%s%s=%s' % (os.linesep, name, value))
 
 def replace_agent_property(name, value, propfile):
-    run("sed '/%s=/ c\%s%s=%s' %s" % (name, os.linesep, name, value, propfile))
+    run("sed -i '/%s=/ c\%s%s=%s' %s" % (name, os.linesep, name, value, propfile))
