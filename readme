@@ -1,1 +1,16 @@
-You need to have sudo & ssh access to the ubuntu machine.
+Fabric script that turns your ubuntu box into a Mono build machine with rake support.
+
+Prerequistis
+
+ - Fabric
+ - sudo rights
+ - ssh access
+
+The script 
+
+ - installs mono
+ - installs team city build agent
+ - installs ruby/rake/albacore
+
+ - configures agent
+ - makes agent start as a daemon
