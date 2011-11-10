@@ -8,7 +8,7 @@ Prerequistis
 
 The script 
 
- - installs mono
+ - compiles & installs mono
  - installs build agent
  - installs ruby/rake/albacore
 
