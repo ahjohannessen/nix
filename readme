@@ -13,3 +13,8 @@ The script
  - installs ruby/rake/albacore
 
  - configures agent and makes it run as a daemon
+
+
+Updating existing Mono environments
+
+ - todo
